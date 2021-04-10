@@ -14,5 +14,9 @@
 
 // TODO: Write solution here
 
+func example(valueOne: String, valueTwo: String = "Yes indeed!") -> String {
+  return valueOne + " so true!! " + valueTwo
+}
 
+print(example(valueOne: "Paul"))
 //: [⇒ Next: 04 - Overloading](@next)
