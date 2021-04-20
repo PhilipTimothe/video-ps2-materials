@@ -18,8 +18,17 @@ let copyLines = { (offense: String, repeatCount: Int) -> Void in
 
 // TODO: Write solution here
 
+let noParams: (String, Int) -> Void = { (offense, repeatCount) -> Void in
+  print( String(repeating: "I must not \(offense).", count: repeatCount) )
+}
 
+let noParamsAndReturn: (String, Int) -> Void = { (offense, repeatCount) in
+  print( String(repeating: "I must not \(offense).", count: repeatCount) )
+}
 
+let noParamsNames: (String, Int) -> Void = { print( String(repeating: "I must not \($0).", count: $1) )
+}
 
+noParams("Scream", 2)
 
 //: [⇒ Next: 06 - forEach and map](@next)
