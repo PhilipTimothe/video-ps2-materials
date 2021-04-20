@@ -14,8 +14,12 @@ func calculateFullName(firstName: String, lastName: String?) -> String {
 // --------------------------------------
 
 // TODO: Write solution here
+var calculateFullNameClosure = { (firstName: String, lastName: String?) -> String in
+  firstName + " " + (lastName ?? "")
+}
 
-
+//let philipsName = calculateFullName(firstName: Philip, lastName: Timothe)
+calculateFullNameClosure("Philip", "Timothe")
 /*:
  ## Challenge 2
  - Call the `printResult` function below
@@ -32,7 +36,9 @@ func printResult(_ operate: Operate, _ a: Double, _ b: Double) {
 // --------------------------------------
 
 // TODO: Write solution here
-
+printResult( { ( a: Double, b: Double) -> Double in
+  a * b
+}, 4, 5)
 
 
 
